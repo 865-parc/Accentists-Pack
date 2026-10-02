@@ -3,94 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Wallppr - Custom Wallpaper Engine</title>
 
 <style>
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #6d28d9, #d946ef);
-    color: white;
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#6d28d9,#d946ef);
+    color:white;
+    min-height:100vh;
 }
 
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
 }
 
-.container {
-    max-width: 900px;
-    text-align: center;
+.container{
+    width:100%;
+    max-width:1000px;
 }
 
-h1 {
-    font-size: 4rem;
-    margin-bottom: 10px;
+.header{
+    text-align:center;
+    margin-bottom:30px;
 }
 
-.subtitle {
-    font-size: 1.3rem;
-    opacity: 0.9;
-    margin-bottom: 30px;
+.header h1{
+    font-size:4rem;
+    margin-bottom:12px;
 }
 
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+.subtitle{
+    font-size:1.25rem;
+    opacity:.9;
+    max-width:700px;
+    margin:0 auto;
 }
 
-.download-btn {
-    display: inline-block;
-    padding: 15px 28px;
-    background: #22c55e;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: 0.2s;
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin:35px 0;
 }
 
-.download-btn:hover {
-    background: #16a34a;
+.btn{
+    display:inline-block;
+    padding:15px 30px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.2s ease;
 }
 
-.source-btn {
-    display: inline-block;
-    padding: 15px 28px;
-    background: #4b5563;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: 0.2s;
+.download-btn{
+    background:#22c55e;
+    color:white;
+    box-shadow:0 6px 18px rgba(34,197,94,.35);
 }
 
-.source-btn:hover {
-    background: #374151;
+.download-btn:hover{
+    background:#16a34a;
+    transform:translateY(-2px);
 }
 
-.card {
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    padding: 30px;
-    text-align: left;
-    margin-bottom: 25px;
+.source-btn{
+    background:#7c3aed;
+    color:white;
+    box-shadow:0 6px 18px rgba(124,58,237,.35);
 }
 
-footer {
-    margin-top: 30px;
-    opacity: 0.8;
+.source-btn:hover{
+    background:#6d28d9;
+    transform:translateY(-2px);
+}
+
+.card{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:32px;
+    margin-bottom:24px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:white;
+}
+
+.card p{
+    line-height:1.7;
+    opacity:.95;
+    margin-bottom:10px;
+}
+
+.card ul{
+    padding-left:20px;
+}
+
+.card li{
+    margin-bottom:10px;
+}
+
+footer{
+    text-align:center;
+    margin-top:25px;
+    opacity:.8;
+    padding-bottom:10px;
+}
+
+@media (max-width:768px){
+
+    .header h1{
+        font-size:3rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn{
+        width:100%;
+        max-width:320px;
+        text-align:center;
+    }
 }
 </style>
 </head>
@@ -99,34 +149,49 @@ footer {
 <section class="hero">
 <div class="container">
 
-<h1>Wallppr</h1>
+<div class="header">
+    <h1>Wallppr</h1>
 
-<p class="subtitle">
-A lightweight custom wallpaper engine with integrated Windows accent color customization.
-</p>
+    <p class="subtitle">
+        A lightweight custom wallpaper engine with integrated Windows accent
+        color customization.
+    </p>
+</div>
 
 <div class="hero-buttons">
-    <a class="download-btn"
+
+    <a class="btn download-btn"
        href="https://github.com/865-parc/Accentists-Pack/releases/latest"
        target="_blank"
        rel="noopener noreferrer">
        Download Latest Release
     </a>
 
-    <a class="source-btn"
+    <a class="btn source-btn"
        href="https://github.com/865-parc/Accentists-Pack"
-       target="_"card">
+       target="_blank"
+       rel="noopener noreferrer">
+       View Source Code
+    </a>
+
+</div>
+
+<div class="card">
     <h2>What is Wallppr?</h2>
 
     <p>
         Wallppr is a lightweight custom wallpaper engine that allows you to
-        display a custom wallpaper on your desktop. The included Accentist
-        utility makes it easy to customize Windows accent colors from a
-        simple interface.
+        display a custom wallpaper on your desktop.
     </p>
 
     <p>
-        The project is designed to be simple, portable, and easy to configure.
+        The included Accentist utility makes it simple to customize Windows
+        accent colors from an easy-to-use interface.
+    </p>
+
+    <p>
+        The project is designed to be lightweight, portable, configurable,
+        and easy to use.
     </p>
 </div>
 
@@ -137,14 +202,36 @@ A lightweight custom wallpaper engine with integrated Windows accent color custo
         <li>Custom wallpaper engine</li>
         <li>Windows accent color customization</li>
         <li>Automatic startup support</li>
-        <li>PNG, JPG, JPEG, and WEBP image support</li>
+        <li>PNG, JPG, JPEG and WEBP support</li>
         <li>Lightweight and easy to configure</li>
         <li>Open source on GitHub</li>
     </ul>
 </div>
 
+<div class="card">
+    <h2>Open Source</h2>
+
+    <p>
+        Wallppr and Accentist are open-source projects hosted on GitHub.
+        You can inspect the source code, report issues, suggest improvements,
+        or contribute directly to development.
+    </p>
+
+    <p>
+        Source Repository:
+        <br><br>
+        <a
+            href="https://github.com/865-parc/Accentists-Pack"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="color:#fff;font-weight:bold;">
+            github.com/865-parc/Accentists-Pack
+        </a>
+    </p>
+</div>
+
 <footer>
-    Wallppr &copy; 2026
+    Wallppr © 2026
 </footer>
 
 </div>
