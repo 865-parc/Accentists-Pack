@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcdescvcvq3gl"]
+
+[ext_resource type="Script" uid="uid://u7iqaiomd2b8" path="res://node_2d.gd" id="1_wtcfe"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wtcfe")
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 13.0
+offset_right = 101.0
+offset_bottom = 39.0
+
+[node name="ApplyButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 57.0
+offset_right = 126.0
+offset_bottom = 88.0
+text = "Apply"
+
+[node name="Restore Defaults" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 100.0
+offset_right = 93.0
+offset_bottom = 126.0
+text = "Restore Defaults"
+
+[node name="StatusLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 148.0
+offset_right = 165.0
+offset_bottom = 171.0
+text = "Preview"
+
+[node name="Wallpaper_Selector" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 218.0
+offset_top = 18.0
+offset_right = 292.0
+offset_bottom = 43.0
+text = "Select Wallpaper"
+
+[connection signal="pressed" from="ApplyButton" to="." method="_on_apply_button_pressed"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj55puchskji"]
+
+[ext_resource type="Script" uid="uid://cq2ced1njxgcr" path="res://node_2d.gd" id="1_0xm2m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0xm2m"]
+outline_size = 1
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0xm2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(434.13644, 264.24075)
+scale = Vector2(1.2139107, 1.3402891)
+
+[node name="FileDialog" type="FileDialog" parent="."]
+oversampling_override = 1.0
+use_native_dialog = true
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 461.0
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "In Protest Naar Individualitieid op apparaaten van parcours"
+label_settings = SubResource("LabelSettings_0xm2m")
