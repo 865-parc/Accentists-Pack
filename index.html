@@ -6,146 +6,148 @@
 <title>Wallppr - Custom Wallpaper Engine</title>
 
 <style>
-    * {
-        box-sizing: border-box;
-    }
+* {
+    box-sizing: border-box;
+}
 
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #6d28d9, #d946ef);
-        color: white;
-    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6d28d9, #d946ef);
+    color: white;
+}
 
-    .hero {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 40px 20px;
-    }
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
 
-    .container {
-        max-width: 900px;
-        text-align: center;
-    }
+.container {
+    max-width: 900px;
+    text-align: center;
+}
 
-    h1 {
-        font-size: 4rem;
-        margin-bottom: 10px;
-    }
+h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
 
-    .subtitle {
-        font-size: 1.3rem;
-        opacity: 0.9;
-        margin-bottom: 40px;
-    }
+.subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
 
-    .card {
-        background: rgba(255,255,255,0.12);
-        backdrop-filter: blur(10px);
-        border-radius: 16px;
-        padding: 30px;
-        text-align: left;
-        margin-bottom: 25px;
-    }
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
 
-    h2 {
-        margin-top: 0;
-    }
+.download-btn {
+    display: inline-block;
+    padding: 15px 28px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.2s;
+}
 
-    .download-btn {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 16px 32px;
-        font-size: 1.1rem;
-        text-decoration: none;
-        color: white;
-        background: #22c55e;
-        border-radius: 10px;
-        font-weight: bold;
-        transition: 0.2s;
-    }
+.download-btn:hover {
+    background: #16a34a;
+}
 
-    .download-btn:hover {
-        background: #16a34a;
-        transform: translateY(-2px);
-    }
+.source-btn {
+    display: inline-block;
+    padding: 15px 28px;
+    background: #4b5563;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.2s;
+}
 
-    ul {
-        line-height: 1.8;
-    }
+.source-btn:hover {
+    background: #374151;
+}
 
-    footer {
-        margin-top: 30px;
-        opacity: 0.8;
-        text-align: center;
-    }
+.card {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 30px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+footer {
+    margin-top: 30px;
+    opacity: 0.8;
+}
 </style>
 </head>
 <body>
 
 <section class="hero">
-    <div class="container">
+<div class="container">
 
-        <h1>Wallppr</h1>
+<h1>Wallppr</h1>
 
-        <p class="subtitle">
-            A lightweight custom wallpaper engine with integrated Windows accent color customization.
-        </p>
+<p class="subtitle">
+A lightweight custom wallpaper engine with integrated Windows accent color customization.
+</p>
 
-        <div class="card">
-            <h2>What is Wallppr?</h2>
+<div class="hero-buttons">
+    <a class="download-btn"
+       href="https://github.com/865-parc/Accentists-Pack/releases/latest"
+       target="_blank"
+       rel="noopener noreferrer">
+       Download Latest Release
+    </a>
 
-            <p>
-                Wallppr is a simple custom wallpaper engine designed to display
-                your chosen wallpaper directly on the desktop. It provides an
-                easy way to personalize your Windows experience while remaining
-                lightweight and straightforward to use.
-            </p>
+    <a class="source-btn"
+       href="https://github.com/865-parc/Accentists-Pack"
+       target="_"card">
+    <h2>What is Wallppr?</h2>
 
-            <p>
-                The software package also includes Accentist, a companion tool
-                that allows you to quickly change Windows accent colors from a
-                dedicated interface.
-            </p>
-        </div>
+    <p>
+        Wallppr is a lightweight custom wallpaper engine that allows you to
+        display a custom wallpaper on your desktop. The included Accentist
+        utility makes it easy to customize Windows accent colors from a
+        simple interface.
+    </p>
 
-        <div class="card">
-            <h2>Features</h2>
+    <p>
+        The project is designed to be simple, portable, and easy to configure.
+    </p>
+</div>
 
-            <ul>
-                <li>Custom wallpaper engine</li>
-                <li>Supports PNG, JPG, JPEG, and WEBP wallpapers</li>
-                <li>Automatic startup support</li>
-                <li>Simple wallpaper replacement system</li>
-                <li>Integrated Accentist color customization tool</li>
-                <li>Lightweight and easy to configure</li>
-            </ul>
-        </div>
+<div class="card">
+    <h2>Features</h2>
 
-        <div class="card">
-            <h2>Download</h2>
+    <ul>
+        <li>Custom wallpaper engine</li>
+        <li>Windows accent color customization</li>
+        <li>Automatic startup support</li>
+        <li>PNG, JPG, JPEG, and WEBP image support</li>
+        <li>Lightweight and easy to configure</li>
+        <li>Open source on GitHub</li>
+    </ul>
+</div>
 
-            <p>
-                Download the latest version of Wallppr directly from GitHub.
-            </p>
+<footer>
+    Wallppr &copy; 2026
+</footer>
 
-            <!-- Replace the URL below with your repository URL -->
-            https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/releases/latest
-                Download Latest Release
-            </a>
-
-            <p style="margin-top:20px;">
-                You can also browse the source code and previous releases on the project's GitHub repository.
-            </p>
-        </div>
-
-        <footer>
-            Wallppr &copy; 2026
-        </footer>
-
-    </div>
+</div>
 </section>
 
 </body>
